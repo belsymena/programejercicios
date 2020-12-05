@@ -4,25 +4,25 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 using namespace std;
 unsigned factorial(unsigned);
-unsigned factorial(unsigned numero) {
-    int resultado = 0;
+unsigned factorial(unsigned num) {
+    int result = 0;
     int contador = 0;
-    if (numero == 0) {
-        resultado=1;
+    if (num == 0) {
+        result=1;
     } else {
-        resultado=1;
-        for(contador=numero; contador>0; contador--) {
-            resultado*=contador;
+        result=1;
+        for(contador=num; contador>0; contador--) {
+            result*=contador;
         }
     }
-    return resultado;
+    return result;
 }
 int main(int argc, char** argv) {
 	int filas = 0;
     int columnas = 0;
     int contador = 0;
     int posicion = 0;
-    int f = 0;
+    int b = 0;
     int c = 0;
     int calculo = 0;
     printf("No.Filas: ");
@@ -32,20 +32,20 @@ int main(int argc, char** argv) {
         columnas+=contador;
     }
     int triangulo[columnas];
-    for(f=0; f<filas-1; f++) 
+    for(b=0; b<filas-1; b++) 
 	{
-        for(c=0; c<=f; c++)
+        for(c=0; c<=b; c++)
 		 {
-           calculo = factorial(f)/(factorial(c)*factorial(f-c));
+           calculo = factorial(b)/(factorial(c)*factorial(b-c));
            triangulo[posicion]=calculo;
            posicion++;
         }
     }
 
     posicion=0;
-    for(f=0;f<filas-1;f++) {
-        printf("\n%*c",(int) (columnas/2)-f,' ');
-        for(c=0;c<=f;c++) {
+    for(b=0;b<filas-1;b++) {
+        printf("\n%*c",(int) (columnas/2)-b,' ');
+        for(c=0;c<=b;c++) {
             printf("%d ",triangulo[posicion]);
             posicion++;
         }
