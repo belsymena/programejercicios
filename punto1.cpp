@@ -5,24 +5,24 @@ using namespace std;
 
 int main()
 {
-    int numeros[10];
-    int numero;
+    int num[10];
+    int num;
     int contador = 0;
 
     cout << "Ingrese 10 numeros enteros: " << endl;
     for(int indice=0; indice<10; indice++)
     {
-        cin >> numeros[indice];
+        cin >> nume[indice];
     }
 
     cout << "Ingrese el numero a buscar: " << endl;
-    cin >> numero;
+    cin >> num;
 
     for(int indice=0; indice<10; indice++)
     {
-        if(numeros[indice] == numero)
+        if(num[indice] == num)
         {
-            cout << "El numero " << numero << " se encontro en la posicion " << indice << endl;
+            cout << "El numero " << num << " se encontro en la posicion " << indice << endl;
             contador++;
         }
     }
@@ -33,7 +33,7 @@ int main()
     }
     else
     {
-        cout << "El numero " << numero << " no se encontro en el array." << endl;
+        cout << "El numero " << num<< " no se encontro en el array." << endl;
     }
 
     return 0;
